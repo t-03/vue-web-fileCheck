@@ -11,6 +11,7 @@ function getUrl(url) {
     });
     res.on("end", function () {
       newHtml = new HTML(strHtml);
+      console.log(newHtml.html);
       if (newHtml.hasTitle()) {
         console.log(newHtml.getTitle());
       } else {

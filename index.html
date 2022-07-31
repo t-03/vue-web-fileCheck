@@ -5,17 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A simple and clean website template" />
-    <meta name="keywords" content="clean, minimal, blog, portfolio, template, ecommerce, online store, shop" />
+    <meta
+      name="keywords"
+      content="clean, minimal, blog, portfolio, template, ecommerce, online store, shop"
+    />
     <title>文件检查</title>
   </head>
   <body>
     <div class="test">盒子</div>
     <div class="test1">盒子1</div>
     <ul id="fruits">
-      <li class="apple">Apple</li>
+      <li class="apple" onclick="play()">Apple</li>
       <li class="orange">Orange</li>
       <li class="pear">Pear1111</li>
     </ul>
+    <div
+      class="paper"
+      style="width: 600px; height: 600px"
+      id="lottie_box"
+    ></div>
   </body>
-  <script></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script> -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"
+    integrity="sha512-yAr4fN9WZH6hESbOwoFZGtSgOP+LSZbs/JeoDr02pOX4yUFfI++qC9YwIQXIGffhnzliykJtdWTV/v3PxSz8aw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    var ani = lottie.loadAnimation({
+      container: document.getElementById("lottie_box"),
+      renderer: "canvas",
+      loop: false,
+      path: "./ossweb-img/confetti.json",
+    });
+    function play() {
+      console.log("play");
+      ani.goToAndPlay(0);
+    }
+    console.log("lottie", lottie);
+  </script>
 </html>

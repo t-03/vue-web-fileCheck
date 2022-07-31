@@ -1,3 +1,9 @@
+/**
+ * @description: HTML标签的查询
+ * @description: HTML tag query
+ * @author: YuQi
+ */
+
 const cheerio = require("cheerio");
 class HtmlContent {
   html = "";
